@@ -33,6 +33,7 @@ public class Principal extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
+        mnEtiqueta = new javax.swing.JCheckBoxMenuItem();
         jMenu2 = new javax.swing.JMenu();
         mnSalir = new javax.swing.JCheckBoxMenuItem();
 
@@ -50,6 +51,16 @@ public class Principal extends javax.swing.JFrame {
         jMenu1.setForeground(new java.awt.Color(255, 153, 0));
         jMenu1.setText("Menu Principal");
         jMenu1.setFont(new java.awt.Font("Bookman Old Style", 2, 18)); // NOI18N
+
+        mnEtiqueta.setSelected(true);
+        mnEtiqueta.setText("Agregar Etiqueta");
+        mnEtiqueta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnEtiquetaActionPerformed(evt);
+            }
+        });
+        jMenu1.add(mnEtiqueta);
+
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Salir");
@@ -90,6 +101,13 @@ public class Principal extends javax.swing.JFrame {
       
         
     }//GEN-LAST:event_mnSalirActionPerformed
+
+    private void mnEtiquetaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnEtiquetaActionPerformed
+        
+        Agregar_Etiqueta Interfaz = new Agregar_Etiqueta(this, rootPaneCheckingEnabled); 
+        Interfaz.setVisible(true); 
+        this.dispose();  
+    }//GEN-LAST:event_mnEtiquetaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -132,6 +150,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JCheckBoxMenuItem mnEtiqueta;
     private javax.swing.JCheckBoxMenuItem mnSalir;
     // End of variables declaration//GEN-END:variables
 }
